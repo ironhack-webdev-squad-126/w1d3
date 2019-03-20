@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: hsl(213, 67%, 54%);
+    transition: 250ms all ease-in-out;
+}
+
+button:hover {
+    transform: translate(-50%, -60%) scale(1.1) rotate(5deg);
+    background-color: hsl(213, 67%, 40%);
+}
+
+button:active {
+    background-color: hsl(213, 67%, 20%);
+}
+
+@keyframes buyNowAnimation {
+    0% {
+        background-color: #85fe8a;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+.buy-btn {
+    top: 30%;
+    transition: none;
+    background-color: #85fe8a;
+    animation-name: buyNowAnimation;
+    animation-play-state: running;
+    animation-duration: 100ms;
+    animation-delay: 50ms;
+    animation-timing-function: none;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
